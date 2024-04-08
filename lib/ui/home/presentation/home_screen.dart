@@ -36,49 +36,29 @@ class _HomeScreenState extends State<HomeScreen> {
       onPopInvoked: (didPop) {
         context.read<HomeViewModel>().disposeVideo();
       },
-      child: YoutubePlayerBuilder(
-        player:  YoutubePlayer(
-          controller: context.watch<HomeViewModel>().controller,
-          showVideoProgressIndicator: true,
-          progressIndicatorColor: Colors.amber,
-          bottomActions: [
-            ProgressBar(
-              isExpanded: true,
-              colors: ProgressBarColors(
-                playedColor: Colors.blue,
-                handleColor: Color.fromRGBO(255, 255, 255, 1),
-              ),
-            ),
-            RemainingDuration(),
-            FullScreenButton(),
+      child: Scaffold(
+        appBar: AppBar(
+          scrolledUnderElevation: 0,
+          title: const Text("Details"),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.share),
+            )
           ],
         ),
-        builder: (p0, p1) {
-          return Scaffold(
-            appBar: AppBar(
-              scrolledUnderElevation: 0,
-              title: const Text("Details"),
-              centerTitle: true,
-              actions: [
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.share),
-                )
-              ],
-            ),
-            body: SingleChildScrollView(
-              child: Column(
-                children: [
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
 
-                  VideoPlayerWidget(context:context,player: p1,),
-                  const VideoDataWidget(),
-                  const SizedBox(height: 15,),
-                  const TabBars(),
-                ],
-              ),
-            ),
-          );
-        },
-    ));
+              VideoPlayerWidget(context:context,player: SizedBox(),),
+              const VideoDataWidget(),
+              const SizedBox(height: 15,),
+              const TabBars(),
+            ],
+          ),
+        ),
+      ));
   }
 }

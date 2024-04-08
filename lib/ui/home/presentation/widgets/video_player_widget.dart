@@ -1,4 +1,5 @@
 
+import 'package:appinio_video_player/appinio_video_player.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,10 +20,10 @@ class VideoPlayerWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20)
       ),
       clipBehavior: Clip.hardEdge,
-      child: player
-      // CustomVideoPlayer(
-      //   customVideoPlayerController: context.watch<HomeViewModel>().customVideoPlayerController,
-      // ),
+      child:
+      CustomVideoPlayer(
+        customVideoPlayerController: context.watch<HomeViewModel>().customVideoPlayerController,
+      ),
     );
   }
 }
