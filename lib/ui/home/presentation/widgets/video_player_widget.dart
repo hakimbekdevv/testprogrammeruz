@@ -1,6 +1,5 @@
 
 import 'package:chewie/chewie.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:testprogrammeruz/ui/home/provider/home_view_model.dart';
@@ -15,7 +14,7 @@ class VideoPlayerWidget extends StatelessWidget {
     return Container(
       height: 220,
       width: double.infinity,
-      margin: EdgeInsets.all(16),
+      margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20)
       ),
