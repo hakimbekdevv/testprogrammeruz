@@ -1,5 +1,5 @@
 
-import 'package:appinio_video_player/appinio_video_player.dart';
+import 'package:chewie/chewie.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,10 +20,15 @@ class VideoPlayerWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(20)
       ),
       clipBehavior: Clip.hardEdge,
-      child:
-      CustomVideoPlayer(
-        customVideoPlayerController: context.watch<HomeViewModel>().customVideoPlayerController,
-      ),
+      child: Theme(
+            data: ThemeData.light().copyWith(
+              platform: TargetPlatform.iOS,
+            ),
+            child: Chewie(
+              controller: context.watch<HomeViewModel>().chewieController,
+            ),
+          )
+
     );
   }
 }

@@ -7,7 +7,7 @@ import 'package:testprogrammeruz/ui/home/presentation/widgets/tab_bars.dart';
 import 'package:testprogrammeruz/ui/home/presentation/widgets/video_data_widget.dart';
 import 'package:testprogrammeruz/ui/home/presentation/widgets/video_player_widget.dart';
 import 'package:testprogrammeruz/ui/home/provider/home_view_model.dart';
-import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

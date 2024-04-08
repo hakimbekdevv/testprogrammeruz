@@ -22,7 +22,7 @@ class TabBars extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: context.watch<HomeViewModel>().buttons.length,
                 itemBuilder: (context, index) {
-                  return GestureDetector(
+                  return InkWell(
                     onTap: () {
                       context.read<HomeViewModel>().tabButton(index);
                     },
