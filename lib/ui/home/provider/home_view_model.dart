@@ -45,20 +45,6 @@ class HomeViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  currentTab() {
-    if (selectedButton==0) {
-      return const SizedBox();
-    } else if (selectedButton==1) {
-      return ListView.builder(
-        itemCount: 7,
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemBuilder: (context, index) => const ItemsWidget(),
-      );
-    } else {
-      return const SizedBox();
-    }
-  }
 
 
 }

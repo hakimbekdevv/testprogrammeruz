@@ -27,13 +27,13 @@ class ItemsWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Lorem Ipsum",style: TextStyle(fontSize: 17,fontWeight: FontWeight.w700,color: Colors.black),),
+                Text("Lorem Ipsum",style: Theme.of(context).textTheme.titleMedium,),
                 const SizedBox(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text("Lesson ",style: TextStyle(fontSize: 13,color: Color.fromRGBO(144, 144, 144, 1)),),
-                    Spacer(),
+                    Text("Lesson ",style: Theme.of(context).textTheme.titleSmall,),
+                    const Spacer(),
                     SizedBox(
                       width: 34,
                       height: 6,

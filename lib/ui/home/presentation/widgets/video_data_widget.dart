@@ -17,24 +17,24 @@ class VideoDataWidget extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text("Travel English",style: TextStyle(fontSize: 22,fontWeight: FontWeight.w700,color: CupertinoColors.black),),
+                Text("Travel English",style: Theme.of(context).textTheme.bodyLarge,),
                 IconButton(
                   onPressed: () {},
                   icon: const Icon(CupertinoIcons.bookmark,color: Colors.grey,size: 30,),
                 )
               ],
             ),
-            const Text("Beginner  . 83.2 Students",style: TextStyle(color: Colors.grey,fontSize: 13),),
+            Text("Beginner  . 83.2 Students",style: Theme.of(context).textTheme.bodySmall),
             const SizedBox(height: 15,),
-            const Row(
+            Row(
               children: [
-                CircleAvatar(
+                const CircleAvatar(
                   radius: 12,
                   backgroundColor: Colors.white,
                   foregroundImage: AssetImage('assets/images/img.png'),
                 ),
-                SizedBox(width: 10,),
-                Text("Anama Kirochi",style: TextStyle(color: Colors.grey,fontSize: 13),)
+                const SizedBox(width: 10,),
+                Text("Anama Kirochi",style: Theme.of(context).textTheme.bodySmall)
               ],
             )
           ],

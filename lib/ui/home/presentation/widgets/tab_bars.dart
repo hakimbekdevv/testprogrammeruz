@@ -55,8 +55,7 @@ class TabBars extends StatelessWidget {
         SizedBox(
           height: 300,
           child: PageView(
-            reverse: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             controller: context.watch<HomeViewModel>().pageController,
             scrollDirection: Axis.horizontal,
             children: tabPages,

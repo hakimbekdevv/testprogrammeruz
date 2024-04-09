@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
         context.read<HomeViewModel>().disposeVideo();
       },
       child: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         appBar: AppBar(
           scrolledUnderElevation: 0,
           title: const Text("Details"),
@@ -68,7 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     shrinkWrap: true,
                     itemBuilder: (context, index) => const ItemsWidget(),
                   ),
-                  const SizedBox()
+                  SizedBox(
+                    child: Center(child: Text("No Comments",style: Theme.of(context).textTheme.bodyLarge,),),
+                  )
                 ],
               ),
             ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:testprogrammeruz/theme/my_theme.dart';
 import 'package:testprogrammeruz/ui/home/presentation/home_screen.dart';
 import 'package:testprogrammeruz/ui/home/provider/home_view_model.dart';
 
@@ -21,10 +22,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-          useMaterial3: true,
-        ),
+        theme: MyTheme.lightThemeData,
         home: const HomeScreen(),
       ),
     );
