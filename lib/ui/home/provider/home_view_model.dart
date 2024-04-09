@@ -12,6 +12,7 @@ class HomeViewModel extends ChangeNotifier {
   int selectedButton=0;
   late ChewieController chewieController;
   late Chewie playerWidget;
+  PageController pageController = PageController();
 
   void initializeVideo(context) async {
     chewieController = ChewieController(
@@ -40,6 +41,7 @@ class HomeViewModel extends ChangeNotifier {
 
   void tabButton(index) {
     selectedButton = index;
+    pageController.animateToPage(index, duration: Duration(milliseconds: 200), curve: Curves.easeIn);
     notifyListeners();
   }
 

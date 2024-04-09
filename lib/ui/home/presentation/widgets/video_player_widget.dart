@@ -16,6 +16,7 @@ class VideoPlayerWidget extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.all(16),
       decoration: BoxDecoration(
+        color: Colors.black,
         borderRadius: BorderRadius.circular(20)
       ),
       clipBehavior: Clip.hardEdge,
